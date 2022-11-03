@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Car_GPS_App</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+
+
+    <string-array name="report">
+        <item>Consumption Report</item>
+        <item>Summary Report</item>
+        <item>Speed Report</item>
+        <item>Temperature</item>
+        <item>Probe Report</item>
+        <item>Driver Behaviour</item>
+        <item>Temperature Frigo</item>
+    </string-array>
+
+    <string-array name="vehicle">
+        <item>All Vehicle</item>
+        <item>01 logan 29727-A-45</item>
+        <item>02 renault clio 29723-A-45</item>
+        <item>03 clio auto 29686-A-45</item>
+        <item>04 Cilo 29722-A-45</item>
+        <item>05 Cilo 29724-A-45</item>
+        <item>06 Accent 29836-A-45</item>
+    </string-array>
+
+</resources>

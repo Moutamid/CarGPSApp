@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4C4949"
+    android:textAlignment="center"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/card1"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            android:background="@drawable/background_border">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_settings_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/parked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maintenance"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:tint="@color/white">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:id="@+id/card2"
+        app:cardElevation="10dp"
+        android:layout_toRightOf="@+id/card1">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/background_border">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:tint="@color/white">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/card3"
+        android:layout_below="@+id/card1"
+        android:layout_marginTop="20dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            android:background="@drawable/background_border">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_notifications_active_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:tint="@color/white">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:id="@+id/card4"
+        app:cardElevation="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/card2"
+        android:layout_toRightOf="@+id/card3">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/background_border">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_directions_car_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:tint="@color/white">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
