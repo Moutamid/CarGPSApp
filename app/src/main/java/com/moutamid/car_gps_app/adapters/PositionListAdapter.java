@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moutamid.car_gps_app.R;
+import com.moutamid.car_gps_app.model.CarDetails;
 import com.moutamid.car_gps_app.model.Position;
 
 import java.util.ArrayList;
@@ -17,9 +18,9 @@ import java.util.ArrayList;
 public class PositionListAdapter extends RecyclerView.Adapter<PositionListAdapter.PositionViewHolder>{
 
     private Context mContext;
-    private ArrayList<Position> positionArrayList;
+    private ArrayList<CarDetails> positionArrayList;
 
-    public PositionListAdapter(Context mContext, ArrayList<Position> positionArrayList) {
+    public PositionListAdapter(Context mContext, ArrayList<CarDetails> positionArrayList) {
         this.mContext = mContext;
         this.positionArrayList = positionArrayList;
     }
@@ -33,10 +34,10 @@ public class PositionListAdapter extends RecyclerView.Adapter<PositionListAdapte
 
     @Override
     public void onBindViewHolder(@NonNull PositionViewHolder holder, int position) {
-        Position model = positionArrayList.get(position);
-        holder.nametxt.setText(model.getName());
-        holder.positiontxt.setText(model.getPosition());
-        holder.citytxt.setText(model.getCity());
+        CarDetails model = positionArrayList.get(position);
+        holder.nametxt.setText(model.getCar());
+        holder.positiontxt.setText("OH 59min");
+        holder.citytxt.setText(model.getLocation());
         holder.timttext.setText(model.getTime());
     }
 
