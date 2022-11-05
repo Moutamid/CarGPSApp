@@ -1,13 +1,9 @@
 package com.moutamid.fragment;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,50 +16,28 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.car_gps_app.R;
+import com.moutamid.car_gps_app.adapters.NotificationListAdapter;
 import com.moutamid.car_gps_app.adapters.PositionListAdapter;
 import com.moutamid.car_gps_app.model.CarDetails;
-import com.moutamid.car_gps_app.model.Position;
 
 import java.util.ArrayList;
 
-public class position_fragment extends Fragment {
+public class MyNotificationFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ArrayList<CarDetails> positionArrayList;
     private DatabaseReference db;
-    private EditText searchTxt;
-    PositionListAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.position_fragment,container,false);
+        View view = inflater.inflate(R.layout.my_notification_fragment,container,false);
         recyclerView = view.findViewById(R.id.recyclerView);
         positionArrayList = new ArrayList<>();
         db = FirebaseDatabase.getInstance().getReference().child("Car");
         getPosition();
-        searchTxt = view.findViewById(R.id.seacrh);
-        searchTxt.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() > 0) {
-                    adapter.getFilter().filter(charSequence.toString());
-                }else {
-                    getPosition();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
         return view;
     }
 
@@ -77,8 +51,9 @@ public class position_fragment extends Fragment {
                         CarDetails model = ds.getValue(CarDetails.class);
                         positionArrayList.add(model);
                     }
-                    adapter = new
-                            PositionListAdapter(getActivity(),positionArrayList);
+
+                    NotificationListAdapter adapter = new
+                            NotificationListAdapter(getActivity(),positionArrayList);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }

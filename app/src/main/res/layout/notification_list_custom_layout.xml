@@ -10,10 +10,10 @@
         android:padding="8dp">
 
         <ImageView
+            android:id="@+id/positionIcon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/positionIcon"
-            android:src="@drawable/ic_baseline_directions_24"/>
+            android:src="@drawable/ic_baseline_directions_car_24" />
 
         <TextView
             android:id="@+id/position"
@@ -56,13 +56,14 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/signal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_marginRight="10dp"
-            android:id="@+id/signal"
-            android:src="@drawable/ic_baseline_signal_cellular_alt_24" />
+            android:tint="@color/white"
+            android:src="@drawable/ic_baseline_location_on_24" />
 
     </RelativeLayout>
 

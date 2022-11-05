@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.car_gps_app.model.User;
 import com.moutamid.fragment.HELP_fragment;
+import com.moutamid.fragment.VehicleGroupFragment;
 import com.moutamid.fragment.alarm_fragment;
 import com.moutamid.fragment.history_fragment;
 import com.moutamid.fragment.home_fragment;
@@ -102,8 +103,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
         else if(id==R.id.vehicle){
-            title.setText("Group Vehicle");
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new settings_fragment()).commit();
+            title.setText("Vehicle Group");
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new VehicleGroupFragment()).commit();
 
         }
         else if(id==R.id.report){
@@ -113,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id==R.id.alarms){
             title.setText("Alarms");
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new alarm_fragment()).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_layout, new alarm_fragment()).commit();
 
         }
         else if(id==R.id.notiification){

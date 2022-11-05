@@ -15,14 +15,6 @@
             android:id="@+id/positionIcon"
             android:src="@drawable/ic_baseline_directions_24"/>
 
-        <TextView
-            android:id="@+id/position"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/positionIcon"
-            android:text="OH 59min"
-            android:textColor="@color/white" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,20 +28,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/text1"
+                android:drawableLeft="@drawable/ic_baseline_directions_car_24"
+                android:drawableTint="#cdcdcd"
+                android:drawablePadding="8dp"
                 android:textColor="@color/white"
                 android:text="01 logan 29727-A-45"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text2"
-                android:textColor="#ff0000"
-                android:text="Route sans nom, Tamassint, Morocco"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/text3"
+                android:layout_marginTop="8dp"
                 android:textColor="@color/white"
                 android:text="03/11/2022 11:36:14"/>
 

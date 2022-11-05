@@ -4,25 +4,35 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/background_border.xml" value="0.17" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/bottomborder.xml" value="0.17" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/car.xml" value="0.1" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/ic_baseline_add_location_alt_24.xml" value="0.17" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.17" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/ic_baseline_notifications_active_24.xml" value="0.17" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/ic_baseline_signal_cellular_alt_24.xml" value="0.17" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/drawable/rounded_outline.xml" value="0.17" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout-v31/info_list_custom_layout.xml" value="0.125" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout-v31/my_notification_fragment.xml" value="0.14356884057971014" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout-v31/notification_list_custom_layout.xml" value="0.125" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout-v31/postion_list_custom_layout.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/activity_login.xml" value="0.14356884057971014" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/activity_main.xml" value="0.20427305888483585" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/activity_screen_position.xml" value="0.14356884057971014" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/activity_sign_up.xml" value="0.14356884057971014" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/app_bar_layout.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/help_fragment.xml" value="0.125" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/info_list_custom_layout.xml" value="0.125" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/my_notification_fragment.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/nav_header_main.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/notification_fragment.xml" value="0.125" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/notification_list_custom_layout.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/position_fragment.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/postion_list_custom_layout.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/report_fragment.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/settings_fragment.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/slider_layout.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/swipe_layout.xml" value="0.14356884057971014" />
+        <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/layout/vehicle_fragment.xml" value="0.125" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/menu/activity_menu_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/New folder/Bridgetlinx/GPS_MASTER/Car_GPS_App/app/src/main/res/menu/bottom_menu_drawer.xml" value="0.20416666666666666" />
       </map>

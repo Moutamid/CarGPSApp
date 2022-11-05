@@ -90,6 +90,7 @@
                                 android:background="@color/purple_700"
                                 android:padding="10dp"
                                 android:text="0"
+                                android:id="@+id/park_count"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -154,6 +155,7 @@
                                 android:background="#4CAF50"
                                 android:padding="10dp"
                                 android:text="0"
+                                android:id="@+id/moving_count"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -218,6 +220,7 @@
                                 android:background="#9C27B0"
                                 android:padding="10dp"
                                 android:text="0"
+                                android:id="@+id/all_count"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -474,12 +477,13 @@
                         android:layout_width="29dp"
                         android:layout_height="50dp"
                         android:id="@+id/left_arrow"
+                        android:layout_gravity="center"
                         android:src="@drawable/left_arrow">
                     </ImageView>
 
                     <androidx.viewpager.widget.ViewPager
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="250dp"
                         android:layout_weight="1"
                         android:id="@+id/viewPager"/>
 
@@ -488,6 +492,7 @@
                         android:layout_width="29dp"
                         android:layout_height="50dp"
                         android:id="@+id/right_arrow"
+                        android:layout_gravity="center"
                         android:src="@drawable/right_arrow">
 
                     </ImageView>
