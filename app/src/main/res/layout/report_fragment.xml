@@ -70,13 +70,13 @@
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"/>
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:id="@+id/start"
-                    android:inputType="date"
                     android:hint="11/3/2022"
-                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColorHint="@color/black"
                     android:textColor="@color/black"/>
 
@@ -86,13 +86,13 @@
                     android:text="Date End:"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"/>
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:id="@+id/end"
-                    android:inputType="date"
                     android:hint="19/7/2022"
-                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColorHint="@color/black"
                     android:textColor="@color/black"/>
 

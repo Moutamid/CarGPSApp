@@ -25,6 +25,11 @@
             android:icon="@drawable/ic_baseline_report_24"
             android:title="Report"/>
         <item
+            android:id="@+id/commands"
+            android:icon="@drawable/ic_baseline_notifications_active_24"
+            android:title="Commands"
+            android:iconTint="@color/black"/>
+        <item
             android:id="@+id/alarms"
             android:icon="@drawable/ic_baseline_notifications_active_24"
             android:title="Alarms"
@@ -39,9 +44,17 @@
             android:icon="@drawable/ic_baseline_settings_24"
             android:title="Maintenance"/>
         <item
+            android:id="@+id/subscription"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Subscription"/>
+        <item
             android:id="@+id/help"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="Assistance"/>
+        <item
+            android:id="@+id/change"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Changement de Mot de"/>
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_baseline_login_24"

@@ -52,14 +52,16 @@ public class home_fragment extends Fragment {
         nextImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pager.setCurrentItem(currentPage+1);
+                currentPage++;
+                pager.setCurrentItem(currentPage);
             }
         });
 
         prevImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pager.setCurrentItem(currentPage-1);
+                currentPage--;
+                pager.setCurrentItem(currentPage);
             }
         });
         return view;
