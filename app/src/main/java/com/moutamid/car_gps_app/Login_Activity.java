@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -67,6 +68,9 @@ public class Login_Activity extends AppCompatActivity {
                     Intent intent = new Intent(Login_Activity.this , MainActivity.class);
                     startActivity(intent);
                     finish();
+                    dialog.dismiss();
+                }else {
+                    Toast.makeText(Login_Activity.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                 }
             }

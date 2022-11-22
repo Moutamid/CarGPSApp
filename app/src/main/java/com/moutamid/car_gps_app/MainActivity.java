@@ -25,12 +25,15 @@ import com.moutamid.car_gps_app.model.User;
 import com.moutamid.fragment.HELP_fragment;
 import com.moutamid.fragment.VehicleGroupFragment;
 import com.moutamid.fragment.alarm_fragment;
+import com.moutamid.fragment.change_fragment;
+import com.moutamid.fragment.commands_fragment;
 import com.moutamid.fragment.history_fragment;
 import com.moutamid.fragment.home_fragment;
 import com.moutamid.fragment.notification_fragment;
 import com.moutamid.fragment.position_fragment;
 import com.moutamid.fragment.report_fragment;
 import com.moutamid.fragment.settings_fragment;
+import com.moutamid.fragment.subscription_fragments;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawer;
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private String emails = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+        emails = user.getEmail();
         NavigationView navigationView = findViewById(R.id.nav_view);
         username = navigationView.getHeaderView(0).findViewById(R.id.navNameTv);
         email = navigationView.getHeaderView(0).findViewById(R.id.navEmailTv);
@@ -112,6 +117,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new report_fragment()).commit();
 
         }
+        else if(id==R.id.commands){
+            title.setText("Commands");
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new commands_fragment()).commit();
+
+        }
         else if(id==R.id.alarms){
             title.setText("Alarms");
             getSupportFragmentManager().beginTransaction()
@@ -127,10 +137,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             title.setText("Help");
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HELP_fragment()).commit();
         }
+        else if(id==R.id.subscription){
+            title.setText("Subscription");
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new subscription_fragments()).commit();
+
+        }
         else if(id==R.id.logout){
             mAuth.signOut();
             startActivity(new Intent(MainActivity.this,Login_Activity.class));
             finish();
+        }
+        else if(id==R.id.change){
+            title.setText("Changement de Mot de");
+            Bundle bundle = new Bundle();
+            bundle.putString("email",emails);
+            change_fragment changeFragment = new change_fragment();
+            changeFragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,changeFragment).commit();
+
         }
         else if(id==R.id.settings){
             title.setText("Maintenance");
