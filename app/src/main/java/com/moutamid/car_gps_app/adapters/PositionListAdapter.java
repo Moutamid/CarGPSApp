@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moutamid.car_gps_app.R;
+import com.moutamid.car_gps_app.listener.ItemPressListener;
 import com.moutamid.car_gps_app.model.CarDetails;
 import com.moutamid.car_gps_app.model.Position;
 
@@ -24,6 +25,7 @@ public class PositionListAdapter extends RecyclerView.Adapter<PositionListAdapte
 
     private Context mContext;
     private ArrayList<CarDetails> positionArrayList;
+    private ItemPressListener itemPressListener;
 
     public PositionListAdapter(Context mContext, ArrayList<CarDetails> positionArrayList) {
         this.mContext = mContext;
@@ -50,6 +52,7 @@ public class PositionListAdapter extends RecyclerView.Adapter<PositionListAdapte
         }else {
             holder.posImg.setImageResource(R.drawable.ic_baseline_local_parking_24);
         }
+
     }
 
     @Override
@@ -106,6 +109,18 @@ public class PositionListAdapter extends RecyclerView.Adapter<PositionListAdapte
             positiontxt = itemView.findViewById(R.id.position);
             timttext = itemView.findViewById(R.id.text3);
             posImg = itemView.findViewById(R.id.positionIcon);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (itemPressListener != null){
+                        itemPressListener.onItemClick(getAdapterPosition(),itemView);
+                    }
+                }
+            });
         }
+    }
+
+    public void setItemPressListener(ItemPressListener itemPressListener){
+        this.itemPressListener = itemPressListener;
     }
 }

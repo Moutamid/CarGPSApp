@@ -1,5 +1,6 @@
 package com.moutamid.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,8 +19,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.moutamid.car_gps_app.AlarmDetails;
+import com.moutamid.car_gps_app.PositionDetails;
 import com.moutamid.car_gps_app.R;
 import com.moutamid.car_gps_app.adapters.PositionListAdapter;
+import com.moutamid.car_gps_app.listener.ItemPressListener;
 import com.moutamid.car_gps_app.model.CarDetails;
 
 import java.util.ArrayList;
@@ -79,6 +83,14 @@ public class alarm_fragment extends Fragment {
                     adapter = new
                             PositionListAdapter(getActivity(),positionArrayList);
                     recyclerView.setAdapter(adapter);
+                    adapter.setItemPressListener(new ItemPressListener() {
+                        @Override
+                        public void onItemClick(int position, View view) {
+                            Intent intent = new Intent(getActivity(), AlarmDetails.class);
+                            intent.putExtra("carDetail",positionArrayList.get(position));
+                            startActivity(intent);
+                        }
+                    });
                     adapter.notifyDataSetChanged();
                 }
             }

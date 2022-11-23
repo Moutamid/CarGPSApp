@@ -28,7 +28,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -49,7 +48,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.moutamid.car_gps_app.R;
-import com.moutamid.car_gps_app.adapters.SlideViewPagerAdapter;
 import com.moutamid.car_gps_app.model.CarDetails;
 
 import java.util.ArrayList;
@@ -195,7 +193,7 @@ public class VehicleGroupFragment extends Fragment implements GoogleApiClient.Co
                             MarkerOptions markerOptions = new MarkerOptions();
                             markerOptions.position(latLng);
                             markerOptions.title(details.getCar());
-                            markerOptions.icon(bitmapDescriptorFromVector(requireContext(),R.drawable.car));
+                            markerOptions.icon(bitmapDescriptorFromVector(requireContext(),R.drawable.cars));
                             mMap.addMarker(markerOptions);
 
                             //move map camera

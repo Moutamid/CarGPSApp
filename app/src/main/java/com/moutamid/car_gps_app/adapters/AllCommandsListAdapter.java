@@ -52,6 +52,7 @@ public class AllCommandsListAdapter extends RecyclerView.Adapter<AllCommandsList
         }else {
             holder.posImg.setImageResource(R.drawable.ic_baseline_local_parking_24);
         }
+
     }
 
     @Override
@@ -112,7 +113,7 @@ public class AllCommandsListAdapter extends RecyclerView.Adapter<AllCommandsList
                 @Override
                 public void onClick(View view) {
                     if (itemPressListener != null){
-                        itemPressListener.onItemClick(getAdapterPosition(),view);
+                        itemPressListener.onItemClick(getAdapterPosition(),itemView);
                     }
                 }
             });

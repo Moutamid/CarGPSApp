@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -21,6 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.moutamid.car_gps_app.Service.ListenNotification;
 import com.moutamid.car_gps_app.model.User;
 import com.moutamid.fragment.HELP_fragment;
 import com.moutamid.fragment.VehicleGroupFragment;
@@ -67,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         title.setText("Dashboard");
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new home_fragment()).commit();
         getUserDetails();
+        if (!isMyServiceRunning()){
+            Intent serviceIntent = new Intent(MainActivity.this,ListenNotification.class);
+            startService(serviceIntent);
+        }
+
     }
 
     private void getUserDetails() {
@@ -88,6 +96,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
                 });
     }
+
+
+    private boolean isMyServiceRunning() {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (ListenNotification.class.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -164,4 +184,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawers();
         return false;
     }
+
 }

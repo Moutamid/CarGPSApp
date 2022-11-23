@@ -1,6 +1,9 @@
 package com.moutamid.car_gps_app.model;
 
-public class CarDetails {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class CarDetails implements Parcelable {
 
     private String id;
     private String car;
@@ -38,6 +41,35 @@ public class CarDetails {
         this.time = time;
         this.status = status;
     }
+
+    protected CarDetails(Parcel in) {
+        id = in.readString();
+        car = in.readString();
+        username = in.readString();
+        email = in.readString();
+        password = in.readString();
+        speed = in.readString();
+        location = in.readString();
+        distance = in.readString();
+        consumption = in.readString();
+        time = in.readString();
+        lat = in.readDouble();
+        lng = in.readDouble();
+        status = in.readString();
+        phone = in.readString();
+    }
+
+    public static final Creator<CarDetails> CREATOR = new Creator<CarDetails>() {
+        @Override
+        public CarDetails createFromParcel(Parcel in) {
+            return new CarDetails(in);
+        }
+
+        @Override
+        public CarDetails[] newArray(int size) {
+            return new CarDetails[size];
+        }
+    };
 
     public String getPhone() {
         return phone;
@@ -149,5 +181,28 @@ public class CarDetails {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(id);
+        parcel.writeString(car);
+        parcel.writeString(username);
+        parcel.writeString(email);
+        parcel.writeString(password);
+        parcel.writeString(speed);
+        parcel.writeString(location);
+        parcel.writeString(distance);
+        parcel.writeString(consumption);
+        parcel.writeString(time);
+        parcel.writeDouble(lat);
+        parcel.writeDouble(lng);
+        parcel.writeString(status);
+        parcel.writeString(phone);
     }
 }

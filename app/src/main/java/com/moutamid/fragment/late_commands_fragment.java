@@ -41,7 +41,7 @@ public class late_commands_fragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         positionArrayList = new ArrayList<>();
         db = FirebaseDatabase.getInstance().getReference().child("Car");
-        getPosition();
+   //     getPosition();
         searchTxt = view.findViewById(R.id.seacrh);
         searchTxt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -54,7 +54,7 @@ public class late_commands_fragment extends Fragment {
                 if (charSequence.length() > 0) {
                     adapter.getFilter().filter(charSequence.toString());
                 }else {
-                    getPosition();
+            //        getPosition();
                 }
             }
 

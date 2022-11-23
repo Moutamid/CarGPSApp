@@ -1,5 +1,6 @@
 package com.moutamid.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -86,6 +88,7 @@ public class all_commands_fragment extends Fragment {
                     adapter.setItemPressListener(new ItemPressListener() {
                         @Override
                         public void onItemClick(int position, View view) {
+                            Toast.makeText(getActivity(), positionArrayList.get(position).getCar(), Toast.LENGTH_SHORT).show();
                             showCommandsDialog(positionArrayList.get(position));
                         }
                     });
@@ -117,6 +120,7 @@ public class all_commands_fragment extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk setdigout 0");
                 alertDialog.dismiss();
             }
         });
@@ -124,6 +128,7 @@ public class all_commands_fragment extends Fragment {
         linearLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk setdigout 1");
                 alertDialog.dismiss();
             }
         });
@@ -131,6 +136,7 @@ public class all_commands_fragment extends Fragment {
         linearLayout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk cpureset");
                 alertDialog.dismiss();
             }
         });
@@ -138,6 +144,7 @@ public class all_commands_fragment extends Fragment {
         linearLayout4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk flush 354017111490187,internet1.meditel.ma,MEDINET,MEDINET,139.99.253.44,5027,0");
                 alertDialog.dismiss();
             }
         });
@@ -145,6 +152,7 @@ public class all_commands_fragment extends Fragment {
         linearLayout5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk setdigout 01 0 2");
                 alertDialog.dismiss();
             }
         });
@@ -152,11 +160,20 @@ public class all_commands_fragment extends Fragment {
         linearLayout6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sentTxtMessage(details.getPhone(),"lex trk ggps");
                 alertDialog.dismiss();
             }
         });
 
         alertDialog.show();
 
+    }
+
+    private void sentTxtMessage(String phone, String msg) {
+        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+        smsIntent.setType("vnd.android-dir/mms-sms");
+        smsIntent.putExtra("address", phone);
+        smsIntent.putExtra("sms_body",msg);
+        startActivity(smsIntent);
     }
 }

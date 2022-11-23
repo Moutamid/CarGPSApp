@@ -41,8 +41,8 @@ public class commands_fragment extends Fragment {
         if (isAdded()) {
             NotificationVPadapter caddieProfileVPadapter = new NotificationVPadapter(
                     getChildFragmentManager());
-            caddieProfileVPadapter.addFragment(new position_fragment(), "ALL");
-            caddieProfileVPadapter.addFragment(new position_fragment(), "LATE");
+            caddieProfileVPadapter.addFragment(new all_commands_fragment(), "ALL");
+            caddieProfileVPadapter.addFragment(new late_commands_fragment(), "LATE");
 
             viewPager.setAdapter(caddieProfileVPadapter);
             tabLayout.setupWithViewPager(viewPager);

@@ -3,8 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="8dp"
-    android:padding="8dp">
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,9 +35,10 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/turn_on"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="@color/purple_200"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,7 +47,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
@@ -60,9 +66,10 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/stop"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="#ff0000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,7 +78,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
         <View
@@ -89,9 +96,10 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/reset"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="@android:color/holo_purple"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,7 +108,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
@@ -123,9 +131,10 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/unblock"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="@android:color/holo_red_light"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -134,7 +143,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
@@ -148,14 +157,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/honk"
+            android:layout_marginLeft="15dp"
             android:gravity="center">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/honk"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="@android:color/holo_blue_bright"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -164,7 +175,7 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
         <View
@@ -182,9 +193,10 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_report_24"
+                android:src="@drawable/wifi"
                 android:background="@drawable/iconborder"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:backgroundTint="@android:color/holo_orange_dark"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -193,11 +205,11 @@
                 android:layout_marginTop="6dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
 
     </LinearLayout>
-
+    </LinearLayout>
 </LinearLayout>
